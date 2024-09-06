@@ -5,10 +5,10 @@
   },
   "scripts": {
     "dev": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/main.css --watch",
-    "build": "cpx './src/pages/**/*.html' dist && postcss ./src/styles/tailwind.css -o ./dist/main.css",
-    "build:css": "postcss ./src/styles/tailwind.css -o ./dist/main.css",
-    "test": "html-minifier-terser src/pages/index.html --collapse-whitespace --output=dist/public/index.html ",
-    "minify-html": "html-minifier-terser src/pages/index.html --collapse-whitespace --output=dist/index.html "
+    "minify-html": "html-minifier-terser src/pages/index.html --collapse-whitespace --output=dist/index.html ",
+    "build:css": "postcss src/styles/tailwind.css -o ./dist/main.css",
+    "build:copy": "copyfiles -u 1 \"src/pages/*.html\" dist",
+    "build": "npm run build:css && npm run build:copy"
   },
   "name": "atomic-vanilla-starterkit",
   "version": "1.0.0",
