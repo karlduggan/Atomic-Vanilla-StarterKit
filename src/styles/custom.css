@@ -1,0 +1,45 @@
+/* Home Page */
+
+.background {
+    /* For WebKit (Safari, Chrome etc) */
+    background-image: -webkit-linear-gradient(320deg, rgb(1,123,220) 0%, rgb(254,141,66) 100%);
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.10);
+  }
+}
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+.parallax-content {
+    transform: translateY(-50%);
+    transition: transform 0.5s ease-out;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .bg-parallax .parallax-content {
+      transform: translateY(calc(-50% + 20px));
+    }
+  }
+
+  #header {
+    background-color: transparent;
+  }
+  #navLinks a {
+    color: white;
+  }
+  
+  /* Scrolled state */
+/* Ensure CSS transitions are applied */
+#header {
+  transition: background-color 0.5s, color 0.5s;
+}
+.bg-white {
+  background-color: white !important;
+}
+.text-black {
+  color: black !important;
+}

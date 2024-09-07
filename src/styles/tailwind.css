@@ -3,3 +3,29 @@
 @tailwind utilities;
 
 /* Apart from the directives of tailwind, you can also use that file to add any custom CSS. */
+* {
+    @apply transition-colors duration-200;
+  }
+
+/* Importing downloaded font from the font directory */
+/* @font-face {
+    font-family: 'Whisper';
+    src: url('../src/assets/fonts/Whisper/Whisper-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../src/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+} */
+@font-face{
+    font-family: 'Oswald';
+    src: url('../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sarala';
+  src: url('../assets/fonts/Sarala/Sarala-Bold.ttf') format('truetype');
+  src: url('../assets/fonts/Sarala/Sarala-Regular.ttf') format('truetype');
+
+  /* Add more formats if needed, e.g., woff, woff2 */
+}
+  
