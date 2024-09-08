@@ -21,11 +21,11 @@ module.exports = {
         highlight: '#FB8B3F', // Accent contrast (Accent)
         base1: '#EEEEEE', // Neautral (Accent)
         base2: '#F4F7F5', // Neautral (Accent)
-        background: '#929292',
+        background: '#94A3B8',
         
         // Dark mode colors
         dark: {
-          primary: '#FFFFFF', 
+          primary: '#999999', 
           secondary: '#FFFFFF', // Example: Light green color
           paragraph: '#FFFFFF',
           highlight: '#ccccff', // Example: Light blue color

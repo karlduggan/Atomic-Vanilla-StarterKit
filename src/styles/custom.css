@@ -43,3 +43,21 @@
 .text-black {
   color: black !important;
 }
+
+/* FAQ DROPDOWN */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq-answer.open {
+  opacity: 1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  max-height: 1000px; /* Set to a high value to accommodate various content lengths */
+  transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.3s ease;
+}
