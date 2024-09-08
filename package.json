@@ -1,16 +1,20 @@
 {
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.10"
   },
   "scripts": {
     "dev": "npx tailwindcss -i src/styles/tailwind.css -o src/styles/output.css --watch",
     "minify-html": "html-minifier-terser src/pages/index.html --collapse-whitespace --output=dist/index.html ",
     "build:css": "postcss src/styles/tailwind.css -o ./dist/styles/output.css",
-    "build:copy": "copyfiles -u 1 \"src/pages/*.html\" dist",
+    "build:customcss": "copyfiles -f \"src/styles/custom.css\" dist/styles",
+    "build:copy": "copyfiles -f \"src/pages/*.html\" dist",
     "build:images": "copyfiles -u 1 \"src/assets/images/**/*\" \"dist/\"",
     "build:fonts": "copyfiles -u 1 \"src/assets/fonts/**/*\" \"dist/\"",
-    "build": "npm run build:css && npm run build:copy && npm run build:images && npm run build:fonts"
+    "build:scripts": "copyfiles -u 1 \"src/scripts/**/*\" \"dist/\"",
+    "build:sitemap": "node src/utils/generate-sitemap.js",
+    "build": "npm run build:css && npm run build:copy && npm run build:images && npm run build:fonts && npm run build:scripts && npm run build:customcss && npm run build:sitemap"
   },
   "name": "atomic-vanilla-starterkit",
   "version": "1.0.0",
